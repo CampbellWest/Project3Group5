@@ -10,7 +10,5 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
 
-    qDebug() << "ERROR"; // like so
-
     return a.exec();
 }
