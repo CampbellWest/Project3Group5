@@ -10,10 +10,21 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    CampbellSource/*.cpp \
+    TylerSource/*.cpp \
+    AliSource/*.cpp
+
+# When you add new files within your file it will look like
+# CampbellSource/filename/*.cpp
+# *.cpp just means it includes all .cpp files in that file
+# and for every file you add in a file you have to add that layer here again
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    CampbellHeader/*.h \
+    TylerHeader/*.h \
+    AliHeader/*.h
 
 FORMS += \
     mainwindow.ui
