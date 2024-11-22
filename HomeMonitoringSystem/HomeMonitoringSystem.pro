@@ -10,9 +10,9 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
-#    CampbellSource/emptyEx.cpp \
-#    TylerSource/emptyEx.cpp \
+    mainwindow.cpp \
+#   CampbellSource/*.cpp \
+#    TylerSource/*.cpp \
 #    AliSource/emptyEx.cpp
 
 # When you add new files within your file it will look like
