@@ -27,4 +27,5 @@ private:
     // example for the path you have to use for files
     QString path = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
 };
+
 #endif // MAINWINDOW_H
