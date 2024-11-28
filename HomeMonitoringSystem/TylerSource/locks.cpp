@@ -1,55 +1,41 @@
-#include "locks.h"
+#include "../TylerHeader/locks.h"
+//#include "mainwindow.h"
+//#include "ui_mainwindow.h"
 
-class LocksData : public QSharedData
-{
-public:
-};
+//#include "QMessageBox"
 
-Locks::Locks()
-    : data(new LocksData)
-{}
+//Locks::Locks(MainWindow *parentWindow) {
+  //  this->mainWindow = parentWindow;
+//}
 
-Locks::Locks(const Locks &rhs)
-    : data{rhs.data}
-{}
+//Locks::~Locks() {
 
-Locks &Locks::operator=(const Locks &rhs)
-{
-    if (this != &rhs)
-        data.operator=(rhs.data);
-    return *this;
-}
+//}
 
-Locks::~Locks() {}
+//void Locks::Lock(void) {
+  //  this->isLocked = true;
+//}
 
+//void Locks::Unlock(void) {
+  //  this->isLocked = false;
+//}
 
-class Locks : protected Device {
-protected:
-    bool isOpen;
-    bool isLocked;
+//void Locks::Close(void) {
+  //  this->isOpen = false;
+//}
 
-public:
-    Locks() {
-        this->isOpen = false;
-        this->isLocked = false;
-    }
-    void Lock(void) {
-        this->isLocked = true;
-    }
-    void Unlock(void) {
-        this->isLocked = false;
-    }
-    void Close(void) {
-        this->isOpen = false;
-    }
-    bool checkLocked(void) {
-        if (this->isLocked == true)
-            return true;
-        return false;
-    }
-    bool checkOpen(void) {
-        if (this->isOpen == true)
-            return true;
-        return false;
-    }
-};
+//bool Locks::checkLocked(void) {
+  //  if (this->isLocked == true)
+    //    return true;
+    //return false;
+//}
+
+//bool Locks::checkOpen(void) {
+  // if (this->isOpen == true)
+    //   return true;
+  // return false;
+//}
+
+//void MainWindow:: on_pushButton_clicked() {
+
+//}

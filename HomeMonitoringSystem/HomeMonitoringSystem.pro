@@ -17,7 +17,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
 #   CampbellSource/*.cpp \
-    TylerSource/*.cpp \
+#    TylerSource/*.cpp \
 #    AliSource/emptyEx.cpp
 
 # When you add new files within your file it will look like
@@ -26,11 +26,11 @@ SOURCES += \
 # and for every file you add in a file you have to add that layer here again
 
 HEADERS += \
-    TylerHeader/doorlocks.h \
-    TylerHeader/garagedoor.h \
-    TylerHeader/locks.h \
-    TylerHeader/windows.h \
-    TylerSource/locks.h \
+#    TylerHeader/doorlocks.h \
+#    TylerHeader/garagedoor.h \
+#    TylerHeader/locks.h \
+#    TylerHeader/windows.h \
+#    TylerSource/locks.h \
     mainwindow.h \
     CampbellHeader/*.h \
     TylerHeader/*.h \

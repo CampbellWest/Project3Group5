@@ -1,19 +1,25 @@
+#include "../TylerHeader/windows.h"
 
+#include "QString"
+#include "QFile"
 
+bool Windows::checkLocked() {
+    if(this->isLocked == true)
+        return true;
+    return false;
+}
 
-#include "windows.h"
+void Windows::Lock() {
+    this->isLocked = true;
+}
 
-class Windows : protected Locks {
-public:
-    Windows() {
-        this->deviceName = "Window";
-        this->homeLocation = "";
-        this->status = true;
+void Windows::Unlock() {
+    this->isLocked = false;
+}
+
+void Windows::autoLock(Windows& window) {
+    if (!window.checkLocked()) {
+
+        window.isLocked = true;
     }
-    void autoLock(Windows& window) {
-        if (!window.checkLocked()) {
-
-            window.isLocked = true;
-        }
-    }
-};
+}

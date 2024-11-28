@@ -1,13 +1,36 @@
 #ifndef DOORLOCKS_H
 #define DOORLOCKS_H
 
-#endif // DOORLOCKS_H
+#include <QString>
 
-#include "locks.h"
+class MainWindow;
 
-class DoorLocks : protected Locks {
+class DoorLocks  {
+
+    MainWindow *mainWindow;
+
+    bool isOpen;
+    bool isLocked;
+
+    QString deviceName;
+    QString homeLocation;
+    bool status;
+
 public:
-    DoorLocks();
+    DoorLocks(MainWindow*);
+    ~DoorLocks();
+
+    bool checkOpen();
+    bool checkLocked();
+
+    void Lock();
+    void Unlock();
+
+    void Close();
+
     void autoClose(DoorLocks& door);
     void autoLock(DoorLocks& door);
+
 };
+
+#endif // DOORLOCKS_H

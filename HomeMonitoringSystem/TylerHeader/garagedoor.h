@@ -1,12 +1,30 @@
 #ifndef GARAGEDOOR_H
 #define GARAGEDOOR_H
 
-#endif // GARAGEDOOR_H
+//#include "locks.h"
+#include <QString>
 
-#include "locks.h"
+class MainWindow;
 
-class GarageDoor : protected Locks {
+class GarageDoor {
+protected:
+    MainWindow *mainWindow;
+
+    bool isOpen;
+
+    QString deviceName;
+    QString homeLocation;
+    bool status;
+
 public:
-    GarageDoor();
+    GarageDoor(MainWindow*);
+    ~GarageDoor();
+
+    bool checkOpen();
+
+    void Close();
+
     void autoClose(GarageDoor& door);
 };
+
+#endif // GARAGEDOOR_H

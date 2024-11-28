@@ -1,49 +1,35 @@
 #ifndef DEVICE_H
 #define DEVICE_H
 
-#include <QMainWindow>
-#include <QObject>
-#include <QQuickItem>
-#include <QSharedDataPointer>
-#include <QWidget>
-
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <chrono>
-#include <future>
+#include <QString>
 
 #define MINUTEDELAY	5
 
-class DeviceData;
-
-class Device
-{
-    Q_OBJECT
-    QML_ELEMENT
-public:
-    Device();
-    Device(const Device &);
-    Device &operator=(const Device &);
-    ~Device();
-
-private:
-    QSharedDataPointer<DeviceData> data;
-};
-
-#endif // DEVICE_H
-
+class MainWindow;
 
 class Device {
 protected:
-    string deviceName;
-    string homeLocation;
+    QString deviceName;
+    QString homeLocation;
     bool status;
 
-public:
-    Device();
+    MainWindow *mainWindow;
 
-    Device(string name, string location, bool status);
-    void readFile(string filePath);
+public:
+    Device(MainWindow*);
+    ~Device();
+
+    QString getName();
+    void setName();
+
+    QString getLocation();
+    void setLocation();
+
+    bool getStatus();
+    void setStatus();
+
+    void readfromFile(QString filePath);
     void passDatatoHMI(void);
 };
+
+#endif //DEVICE_H

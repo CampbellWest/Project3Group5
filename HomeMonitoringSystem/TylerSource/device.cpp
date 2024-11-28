@@ -1,57 +1,43 @@
-#include "device.h"
+#include "../TylerHeader/device.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 
-class DeviceData : public QSharedData
-{
-public:
+#include <Qstring>
+#include <QObject>
+#include <QTextStream>
+#include "QFile"
+#include "QMessageBox"
 
-};
+Device::Device(MainWindow *parentWindow) {
+    this->mainWindow = parentWindow;
 
-Device::Device() : data(new DeviceData)
-{
-
-}
-
-Device::Device(const Device &rhs)
-    : data{rhs.data}
-{
+    readFromFile();
 
 }
 
-Device &Device::operator=(const Device &rhs)
-{
-    if (this != &rhs)
-        data.operator=(rhs.data);
-    return *this;
-}
-
-Device::~Device()
-{
+Device::~Device() {
 
 }
+QString Device::getName() {
+    return this->deviceName;
+}
 
+void Device::setName(QString name) {
+    this->deviceName = name;
+}
 
-class Device {
-protected:
-    string deviceName;
-    string homeLocation;
-    bool status;
+QString Device::getLocation() {
+    return this->homeLocation;
+}
 
-public:
-    Device() {
-        this->deviceName = "";
-        this->homeLocation = "";
-        this->status = NULL;
-    }
+void Device::setLocation(QString location) {
+    this->homeLocation = location;
+}
 
-    Device(string name, string location, bool status) {
-        this->deviceName = name;
-        this->homeLocation = location;
-        this->status = status;
-    }
-    void readFile(string filePath) {
+bool Device::getStatus() {
+    return this->status;
+}
 
-    }
-    void passDatatoHMI(void) {
-
-    }
-};
+void Device::setStatus(bool status) {
+    this->status = status;
+}

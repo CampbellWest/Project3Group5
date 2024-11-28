@@ -1,12 +1,30 @@
 #ifndef WINDOWS_H
 #define WINDOWS_H
 
-#endif // WINDOWS_H
+#include "../TylerHeader/locks.h"
+#include <QString>
 
-#include "locks.h"
+class MainWindow;
 
-class Windows : protected Locks {
+class Windows {
+    MainWindow *mainWindow;
+
+    bool isLocked;
+
+    QString deviceName;
+    QString homeLocation;
+    bool status;
+
 public:
-    Windows();
+    Windows(MainWindow*);
+    ~Windows();
+
+    bool checkLocked();
+
+    void Lock();
+    void Unlock();
+
     void autoLock(Windows& window);
 };
+
+#endif // WINDOWS_H
