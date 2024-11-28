@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -9,6 +12,18 @@
     <width>800</width>
     <height>600</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
   </property>
   <property name="cursor">
    <cursorShape>UpArrowCursor</cursorShape>
@@ -147,14 +162,88 @@
        <property name="spacing">
         <number>2</number>
        </property>
-       <item row="6" column="2">
-        <widget class="QFrame" name="WindowMonitor">
+       <item row="5" column="3">
+        <widget class="QFrame" name="COMonitor">
          <property name="frameShape">
           <enum>QFrame::Shape::StyledPanel</enum>
          </property>
          <property name="frameShadow">
           <enum>QFrame::Shadow::Raised</enum>
          </property>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>81</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>CO Monitor </string>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="lcdNumber">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>40</y>
+            <width>151</width>
+            <height>71</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>120</y>
+            <width>151</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+	    background-color: green;
+    color: white;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QTextBrowser" name="textBrowser_3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>261</width>
+            <height>181</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>120</y>
+            <width>151</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <zorder>textBrowser_3</zorder>
+         <zorder>label</zorder>
+         <zorder>lcdNumber</zorder>
+         <zorder>label_2</zorder>
+         <zorder>pushButton_2</zorder>
         </widget>
        </item>
        <item row="6" column="3">
@@ -266,16 +355,6 @@
          </property>
         </widget>
        </item>
-       <item row="4" column="3">
-        <widget class="QFrame" name="SecurityCameraMonitor">
-         <property name="frameShape">
-          <enum>QFrame::Shape::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Shadow::Raised</enum>
-         </property>
-        </widget>
-       </item>
        <item row="5" column="2">
         <widget class="QFrame" name="SmokeAlarmMonitor">
          <property name="frameShape">
@@ -294,7 +373,7 @@
            </rect>
           </property>
          </widget>
-         <widget class="QLabel" name="label_3">
+         <widget class="QLabel" name="SmokeIndicator">
           <property name="geometry">
            <rect>
             <x>60</x>
@@ -340,40 +419,33 @@
            </rect>
           </property>
          </widget>
-        </widget>
-       </item>
-       <item row="5" column="3">
-        <widget class="QFrame" name="COMonitor">
-         <property name="frameShape">
-          <enum>QFrame::Shape::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Shadow::Raised</enum>
-         </property>
-         <widget class="QLabel" name="label">
+         <widget class="QWidget" name="widget" native="true">
           <property name="geometry">
            <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>81</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>CO Monitor </string>
-          </property>
-         </widget>
-         <widget class="QLCDNumber" name="lcdNumber">
-          <property name="geometry">
-           <rect>
-            <x>60</x>
-            <y>40</y>
-            <width>151</width>
-            <height>71</height>
+            <x>190</x>
+            <y>160</y>
+            <width>120</width>
+            <height>80</height>
            </rect>
           </property>
          </widget>
-         <widget class="QLabel" name="label_2">
+         <widget class="QFrame" name="WindowMonitor">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>261</width>
+            <height>178</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton">
           <property name="geometry">
            <rect>
             <x>60</x>
@@ -382,34 +454,27 @@
             <height>41</height>
            </rect>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QLabel {
-	    background-color: green;
-    color: white;
-    border: 2px solid gray;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-}</string>
-          </property>
           <property name="text">
            <string/>
           </property>
          </widget>
-         <widget class="QTextBrowser" name="textBrowser_3">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>261</width>
-            <height>181</height>
-           </rect>
-          </property>
-         </widget>
-         <zorder>textBrowser_3</zorder>
-         <zorder>label</zorder>
-         <zorder>lcdNumber</zorder>
-         <zorder>label_2</zorder>
+         <zorder>WindowMonitor</zorder>
+         <zorder>textBrowser_4</zorder>
+         <zorder>SmokeIndicator</zorder>
+         <zorder>label_4</zorder>
+         <zorder>lcdNumber_2</zorder>
+         <zorder>widget</zorder>
+         <zorder>pushButton</zorder>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <widget class="QFrame" name="SecurityCameraMonitor">
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
         </widget>
        </item>
       </layout>
@@ -502,10 +567,13 @@
            </font>
           </property>
           <property name="text">
-           <string>7</string>
+           <string>0</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+          <property name="placeholderText">
+           <string>0</string>
           </property>
          </widget>
          <widget class="QPushButton" name="ThermostatPush">
@@ -570,6 +638,22 @@
            <string>Thermostat</string>
           </property>
          </widget>
+         <widget class="QTextBrowser" name="textBrowser">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>251</width>
+            <height>261</height>
+           </rect>
+          </property>
+         </widget>
+         <zorder>textBrowser</zorder>
+         <zorder>ThermoStatInput</zorder>
+         <zorder>ThermostatPush</zorder>
+         <zorder>ToggleFan</zorder>
+         <zorder>FanLabel</zorder>
+         <zorder>label_6</zorder>
         </widget>
        </item>
       </layout>
