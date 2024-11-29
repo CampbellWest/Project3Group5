@@ -2,7 +2,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include <Qstring>
+#include "QString"
 #include <QObject>
 #include <QTextStream>
 #include "QFile"
@@ -11,7 +11,7 @@
 Device::Device(MainWindow *parentWindow) {
     this->mainWindow = parentWindow;
 
-    readFromFile();
+    //readFromFile();
 
 }
 

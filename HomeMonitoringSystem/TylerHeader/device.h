@@ -20,16 +20,16 @@ public:
     ~Device();
 
     QString getName();
-    void setName();
+    void setName(QString);
 
     QString getLocation();
-    void setLocation();
+    void setLocation(QString);
 
     bool getStatus();
-    void setStatus();
+    void setStatus(bool);
 
-    void readfromFile(QString filePath);
-    void passDatatoHMI(void);
+    void readFromFile();
+    void passDatatoHMI();
 };
 
 #endif //DEVICE_H

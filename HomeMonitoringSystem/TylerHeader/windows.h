@@ -20,9 +20,12 @@ public:
     ~Windows();
 
     bool checkLocked();
+    void setLocked(bool);
 
     void Lock();
     void Unlock();
+
+    void readFromFile();
 
     void autoLock(Windows& window);
 };

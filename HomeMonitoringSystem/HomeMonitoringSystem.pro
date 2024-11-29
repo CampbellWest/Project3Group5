@@ -10,14 +10,12 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-<<<<<<< HEAD
+    TylerSource/device.cpp \
     TylerSource/doorlocks.cpp \
     TylerSource/garagedoor.cpp \
     TylerSource/locks.cpp \
     TylerSource/windows.cpp \
-=======
     CampbellSource/AuditLogs.cpp \
->>>>>>> origin/main
     main.cpp \
     mainwindow.cpp \
     CampbellSource/Thermostat.cpp \
@@ -35,15 +33,12 @@ SOURCES += \
 # and for every file you add in a file you have to add that layer here again
 
 HEADERS += \
-<<<<<<< HEAD
-#    TylerHeader/doorlocks.h \
-#    TylerHeader/garagedoor.h \
-#    TylerHeader/locks.h \
-#    TylerHeader/windows.h \
-#    TylerSource/locks.h \
-=======
+    TylerHeader/doorlocks.h \
+    TylerHeader/garagedoor.h \
+    TylerHeader/locks.h \
+    TylerHeader/windows.h \
+    TylerHeader/device.h \
     CampbellHeader/AuditLogs.h \
->>>>>>> origin/main
     mainwindow.h \
     CampbellHeader/COMonitor.h \
     CampbellHeader/Thermostat.h \

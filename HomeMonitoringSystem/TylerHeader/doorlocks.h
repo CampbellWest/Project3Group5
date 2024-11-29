@@ -21,7 +21,10 @@ public:
     ~DoorLocks();
 
     bool checkOpen();
+    void setOpen(bool);
+
     bool checkLocked();
+    void setLocked(bool);
 
     void Lock();
     void Unlock();
@@ -30,6 +33,8 @@ public:
 
     void autoClose(DoorLocks& door);
     void autoLock(DoorLocks& door);
+
+    void readFromFile();
 
 };
 

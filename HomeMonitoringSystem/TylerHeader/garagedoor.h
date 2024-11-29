@@ -7,7 +7,6 @@
 class MainWindow;
 
 class GarageDoor {
-protected:
     MainWindow *mainWindow;
 
     bool isOpen;
@@ -21,8 +20,11 @@ public:
     ~GarageDoor();
 
     bool checkOpen();
+    void setOpen(bool status);
 
     void Close();
+
+    void readFromFile();
 
     void autoClose(GarageDoor& door);
 };
