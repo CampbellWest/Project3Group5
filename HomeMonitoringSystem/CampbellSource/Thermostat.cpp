@@ -9,8 +9,6 @@ Thermostat::Thermostat(MainWindow *parentWindow){
     this->mainWindow = parentWindow;
 
     readFromFile();
-
-    mainWindow->setThermostatOnStartUp(this->getTemp(), this->getFanStatus());
 }
 
 Thermostat::~Thermostat() {
@@ -51,7 +49,9 @@ void Thermostat::readFromFile() {
 
     if (file.size() == 0){
         qDebug() << "file empty";
-        mainWindow->setThermostatOnStartUp(20, 0);
+        setTemp(20);
+        setFanStatus(1);
+        mainWindow->setThermostatOnStartUp(getTemp(), getFanStatus());
         return;
     }
 
@@ -66,7 +66,7 @@ void Thermostat::readFromFile() {
     setTemp(inputs[0].toInt());
     setFanStatus(inputs[1].toInt());
 
-    mainWindow->setThermostatOnStartUp(this->getTemp(), this->getFanStatus());
+    mainWindow->setThermostatOnStartUp(getTemp(), getFanStatus());
 
     file.close();
 }

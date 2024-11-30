@@ -1,8 +1,6 @@
 #ifndef SMOKEALARM_H
 #define SMOKEALARM_H
 
-class MainWindow;
-
 class SmokeAlarm {
     bool alarmStatus;
 
