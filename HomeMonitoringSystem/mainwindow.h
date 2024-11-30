@@ -9,6 +9,9 @@
 #include "CampbellHeader/Thermostat.h"
 #include "CampbellHeader/COMonitor.h"
 #include "CampbellHeader/SmokeAlarm.h"
+#include "TylerHeader/doorlocks.h"
+#include "TylerHeader/garagedoor.h"
+#include "TylerHeader/windows.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -26,6 +29,10 @@ public:
 
     void setThermostatOnStartUp(int, bool);
 
+    void setDoorOnStartUp(bool, bool);
+    void setGarageOnStartUp(bool);
+    void setWindowOnStartUp(bool);
+
 private slots:
 
     // Thermostat
@@ -40,6 +47,15 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    //Door Locks
+    void on_lockDoor_clicked();
+    void on_unlockDoor_clicked();
+    void on_closeDoor_clicked();
+    //Garage Door
+    void on_closeGarage_clicked();
+    //Windows
+    void on_lockWindow_clicked();
+    void on_unlockWindow_clicked();
 private:
     Ui::MainWindow *ui;
 
@@ -49,6 +65,11 @@ private:
     SmokeAlarm *smokeAlarm;
 
     SmokeAlarmAlertForm *smokeAlarmPopup;
+
+    // Tyler's Classes
+    DoorLocks *doors;
+    GarageDoor *garage;
+    Windows *window;
 
     // can add variables to use else where
     // example for the path you have to use for files

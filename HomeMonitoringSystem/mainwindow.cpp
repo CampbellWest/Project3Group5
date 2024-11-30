@@ -19,6 +19,9 @@ MainWindow::MainWindow(QWidget *parent)
     this->thermostat = new Thermostat(this);
     this->coMonitor = new COMonitor();
     this->smokeAlarm = new SmokeAlarm();
+    this->doors = new DoorLocks(this);
+    this->garage = new GarageDoor(this);
+    this->window = new Windows(this);
 
 }
 
@@ -31,6 +34,9 @@ MainWindow::~MainWindow()
     delete thermostat;
     delete coMonitor;
     delete smokeAlarm;
+    delete doors;
+    delete garage;
+    delete window;
 }
 
 
