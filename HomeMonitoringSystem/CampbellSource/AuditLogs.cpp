@@ -64,3 +64,16 @@ QVector<QString> AuditLogs::readLogsFromFile() {
 
     return logs;
 }
+
+void MainWindow::on_ClearLogs_clicked() {
+    QString path = (QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "\\AuditLogs.txt");
+    QFile file(path);
+
+    if (file.open(QIODeviceBase::WriteOnly | QIODevice::Truncate)) {
+        file.close();
+    } else {
+        qDebug() << "Failed to wipe file";
+    }
+
+    ui->LogList->clear();
+}
