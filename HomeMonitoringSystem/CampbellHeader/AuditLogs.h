@@ -3,17 +3,26 @@
 
 #include <QVector>
 #include <QString>
+#include <QFile>
+#include <QStandardPaths>
+#include <QMessageBox>
+
+class MainWindow;
 
 class AuditLogs {
-    QVector <QString> logHistory;
-    QString filePath;
+    //QVector <QString> logHistory;
+    //QFile file(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "\\AuditLogs.txt");
+    QString path;
+
+    MainWindow *mainWindow;
 
 public:
 
-    QString createEntry(/* Take in a 'device' and make entry based off of that */);
-    void addEntry();
-    QVector <QString> readLogsFromFile();
-};
+    AuditLogs(QString log = "EMPTY");
 
+    void addEntry(QString);
+    QVector <QString> readLogsFromFile();
+    void clearLogs();
+};
 
 #endif // AUDITLOGS_H
