@@ -72,8 +72,6 @@ void Windows::autoLock(Windows& window) {
 }
 
 void MainWindow::setWindowOnStartUp(bool lockStatus) {
-    ui->windowDropDown->addItems({"Bedroom", "Kitchen"});
-    ui->showWindow->addItems({"Bedroom", "Kitchen"});
 
     if(lockStatus) {
 
