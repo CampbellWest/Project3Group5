@@ -13,6 +13,7 @@ void SmokeAlarm::toggleAlarm() {
         // turn alarm on
     }
 }
+
 bool checkForSmoke() {
     // make a randomizer that will sometimes return yes for smoke then display alert
 }
