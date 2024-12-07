@@ -101,7 +101,7 @@
      <enum>QTabWidget::TabShape::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="iconSize">
      <size>
@@ -369,7 +369,7 @@
            <string>CO Monitor </string>
           </property>
          </widget>
-         <widget class="QLCDNumber" name="lcdNumber">
+         <widget class="QLCDNumber" name="COAlarmNumber">
           <property name="geometry">
            <rect>
             <x>60</x>
@@ -427,7 +427,7 @@
          </widget>
          <zorder>textBrowser_3</zorder>
          <zorder>label</zorder>
-         <zorder>lcdNumber</zorder>
+         <zorder>COAlarmNumber</zorder>
          <zorder>label_2</zorder>
          <zorder>pushButton_2</zorder>
         </widget>
@@ -486,7 +486,7 @@
            <string>Smoke Alarm</string>
           </property>
          </widget>
-         <widget class="QLCDNumber" name="lcdNumber_2">
+         <widget class="QLCDNumber" name="SmokeAlarmNumber">
           <property name="geometry">
            <rect>
             <x>60</x>

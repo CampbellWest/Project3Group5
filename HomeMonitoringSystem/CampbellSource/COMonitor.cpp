@@ -2,6 +2,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QRandomGenerator>
+
 COMonitor::COMonitor() {
     this->currentCOLevel = 0.0;
 }
@@ -20,12 +22,20 @@ void MainWindow::on_pushButton_2_clicked()
         smokeAlarmPopup = new SmokeAlarmAlertForm(this);
     }
 
-    smokeAlarmPopup->setParent(this); // Set the main window as the parent
-    smokeAlarmPopup->resize(500, 300);
-    smokeAlarmPopup->setWindowFlags(Qt::Popup | Qt::FramelessWindowHint);
-    smokeAlarmPopup->move(this->geometry().center() - smokeAlarmPopup->rect().center());
+    int randomNum = QRandomGenerator::global()->bounded(0, 61);
 
-    smokeAlarmPopup->updateLabelText("DANGER");
+    if (randomNum > 49) {
+        ui->COAlarmNumber->display(randomNum);
+        smokeAlarmPopup->setParent(this); // Set the main window as the parent
+        smokeAlarmPopup->resize(500, 300);
+        smokeAlarmPopup->setWindowFlags(Qt::Popup | Qt::FramelessWindowHint);
+        smokeAlarmPopup->move(this->geometry().center() - smokeAlarmPopup->rect().center());
+        smokeAlarmPopup->updateLabelText("DANGER");
+        smokeAlarmPopup->show();
 
-    smokeAlarmPopup->show();
+        AuditLogs *logger = new AuditLogs("CO Alarm was set off");
+        delete logger;
+    } else {
+        ui->COAlarmNumber->display(0);
+    }
 }
