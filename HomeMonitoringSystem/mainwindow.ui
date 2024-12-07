@@ -280,6 +280,20 @@
            </rect>
           </property>
          </widget>
+         <widget class="QTextBrowser" name="textBrowser_8">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>261</width>
+            <height>181</height>
+           </rect>
+          </property>
+         </widget>
+         <zorder>textBrowser_8</zorder>
+         <zorder>label_7</zorder>
+         <zorder>windowLockedMonitor</zorder>
+         <zorder>windowDropDown</zorder>
         </widget>
        </item>
        <item row="4" column="2">
@@ -346,6 +360,20 @@
            </rect>
           </property>
          </widget>
+         <widget class="QTextBrowser" name="textBrowser_9">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>261</width>
+            <height>181</height>
+           </rect>
+          </property>
+         </widget>
+         <zorder>textBrowser_9</zorder>
+         <zorder>label_6</zorder>
+         <zorder>garageOpenMonitor</zorder>
+         <zorder>garageDropDown</zorder>
         </widget>
        </item>
        <item row="5" column="3">
@@ -598,6 +626,21 @@
            <string/>
           </property>
          </widget>
+         <widget class="QTextBrowser" name="textBrowser_7">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>261</width>
+            <height>181</height>
+           </rect>
+          </property>
+         </widget>
+         <zorder>textBrowser_7</zorder>
+         <zorder>label_8</zorder>
+         <zorder>doorDropDown</zorder>
+         <zorder>doorOpenMonitor</zorder>
+         <zorder>doorLockedMonitor</zorder>
         </widget>
        </item>
       </layout>
@@ -855,6 +898,24 @@
            <string/>
           </property>
          </widget>
+         <widget class="QTextBrowser" name="textBrowser_12">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>251</width>
+            <height>261</height>
+           </rect>
+          </property>
+         </widget>
+         <zorder>textBrowser_12</zorder>
+         <zorder>label_9</zorder>
+         <zorder>lockDoor</zorder>
+         <zorder>selectDoo</zorder>
+         <zorder>unlockDoor</zorder>
+         <zorder>closeDoor</zorder>
+         <zorder>doorOpenControl</zorder>
+         <zorder>doorLockedControl</zorder>
         </widget>
        </item>
        <item row="0" column="1">
@@ -924,6 +985,21 @@
            <string/>
           </property>
          </widget>
+         <widget class="QTextBrowser" name="textBrowser_11">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>251</width>
+            <height>261</height>
+           </rect>
+          </property>
+         </widget>
+         <zorder>textBrowser_11</zorder>
+         <zorder>label_10</zorder>
+         <zorder>closeGarage</zorder>
+         <zorder>selectDoo_2</zorder>
+         <zorder>garageOpenControl</zorder>
         </widget>
        </item>
        <item row="1" column="1">
@@ -1016,6 +1092,22 @@
            <string/>
           </property>
          </widget>
+         <widget class="QTextBrowser" name="textBrowser_10">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>251</width>
+            <height>261</height>
+           </rect>
+          </property>
+         </widget>
+         <zorder>textBrowser_10</zorder>
+         <zorder>label_11</zorder>
+         <zorder>lockWindow</zorder>
+         <zorder>unlockWindow</zorder>
+         <zorder>selectDoo_3</zorder>
+         <zorder>windowLockedControl</zorder>
         </widget>
        </item>
       </layout>
@@ -1118,6 +1210,19 @@ background-color: rgb(197, 201, 205);
           </property>
           <property name="sortingEnabled">
            <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ClearLogs">
+          <property name="geometry">
+           <rect>
+            <x>270</x>
+            <y>10</y>
+            <width>101</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Clear Logs</string>
           </property>
          </widget>
         </widget>

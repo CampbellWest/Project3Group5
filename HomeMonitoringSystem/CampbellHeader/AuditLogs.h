@@ -22,6 +22,7 @@ public:
 
     void addEntry(QString);
     QVector <QString> readLogsFromFile();
+    void clearLogs();
 };
 
 #endif // AUDITLOGS_H
