@@ -43,7 +43,7 @@ void Windows::readFromFile() {
     }
 
     if (file.size() == 0){
-        qDebug() << "file empty";
+        //qDebug() << "file empty";
         mainWindow->setDoorOnStartUp(0, 1);
         return;
     }

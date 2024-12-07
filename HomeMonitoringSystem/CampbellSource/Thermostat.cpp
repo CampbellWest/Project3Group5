@@ -1,4 +1,5 @@
 #include "../CampbellHeader/Thermostat.h"
+#include "CampbellHeader/AuditLogs.h"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -28,11 +29,14 @@ void Thermostat::setFanStatus(int fanStatus) {
 }
 
 void Thermostat::toggleFan() {
-    if (this->getFanStatus()) {
+    if (getFanStatus()) {
         this->fanStatus = false;
     } else {
         this->fanStatus = true;
     }
+
+    AuditLogs *logger = new AuditLogs(QString("Fan toggle to ") + (getFanStatus() ? "On" : "Off"));
+    delete logger;
 }
 
 bool Thermostat::getFanStatus() {
@@ -135,10 +139,15 @@ void MainWindow::on_ThermostatPush_clicked() {
 
     int tempInt = temp.toInt();
 
-    ui->ThermostatNumber->display(tempInt);
-    ui->ThermoStatInput->clear();
+    if(tempInt >= 5 && tempInt <= 30) {
+        ui->ThermostatNumber->display(tempInt);
+        ui->ThermoStatInput->clear();
 
-    thermostat->setTemp(tempInt);
+        thermostat->setTemp(tempInt);
+
+        AuditLogs *logger = new AuditLogs(QString("Thermostat set to ") + QString::number(thermostat->getTemp()));
+        delete logger;
+    }
 }
 
 void MainWindow::on_ToggleFan_clicked() {
