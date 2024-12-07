@@ -5,6 +5,7 @@
 #include "QString"
 #include "QFile"
 #include "QMessageBox"
+//#include "QComboBox"
 
 Windows::Windows(MainWindow *parentWindow) {
     this->mainWindow = parentWindow;
@@ -71,6 +72,7 @@ void Windows::autoLock(Windows& window) {
 }
 
 void MainWindow::setWindowOnStartUp(bool lockStatus) {
+
     if(lockStatus) {
 
         ui->windowLockedMonitor->setText("WINDOW LOCKED") ;
@@ -136,6 +138,8 @@ void MainWindow::on_lockWindow_clicked() {
         "font-size: 16px;"
         "text-align: center;"
         );
+    AuditLogs *logger = new AuditLogs(QString("Window Is Now Locked"));
+    delete logger;
 }
 void MainWindow::on_unlockWindow_clicked() {
     window->Unlock();
@@ -158,4 +162,6 @@ void MainWindow::on_unlockWindow_clicked() {
         "text-align: center;"
         "vertical-align: middle;"
         );
+    AuditLogs *logger = new AuditLogs(QString("Window Is Now Unlocked"));
+    delete logger;
 }

@@ -1,12 +1,13 @@
 #ifndef GARAGEDOOR_H
 #define GARAGEDOOR_H
 
-//#include "locks.h"
 #include <QString>
+#include "CampbellHeader/AuditLogs.h"
 
 class MainWindow;
 
 class GarageDoor {
+
     MainWindow *mainWindow;
 
     bool isOpen;

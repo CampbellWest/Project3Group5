@@ -2,6 +2,7 @@
 #define DOORLOCKS_H
 
 #include <QString>
+#include "CampbellHeader/AuditLogs.h"
 
 class MainWindow;
 
@@ -31,8 +32,8 @@ public:
 
     void Close();
 
-    void autoClose(DoorLocks& door);
-    void autoLock(DoorLocks& door);
+    void autoClose();
+    void autoLock();
 
     void readFromFile();
 

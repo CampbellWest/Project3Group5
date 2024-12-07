@@ -61,6 +61,8 @@ private slots:
     void on_lockDoor_clicked();
     void on_unlockDoor_clicked();
     void on_closeDoor_clicked();
+
+
     //Garage Door
     void on_closeGarage_clicked();
     //Windows
@@ -86,6 +88,7 @@ private:
     DoorLocks *doors;
     GarageDoor *garage;
     Windows *window;
+    QTimer* timer;
 
     // can add variables to use else where
     // example for the path you have to use for files
