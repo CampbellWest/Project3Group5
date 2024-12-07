@@ -3,7 +3,7 @@
 #include "ui_mainwindow.h"
 
 #include "QString"
-#include <QTimer>
+#include "QTimer"
 #include <QObject>
 #include "QFile"
 #include "QMessageBox"
@@ -80,18 +80,19 @@ void DoorLocks::readFromFile() {
     file.close();
 }
 
-void DoorLocks::autoClose(DoorLocks& door) {
-    if (door.checkOpen()) {
-
-        door.isOpen = false;
-    }
+void DoorLocks::autoClose() {
+    QTimer* timer = new QTimer();
+    timer->setInterval(10);
+    timer->start();
+    this->isOpen = false;
 }
 
-void DoorLocks::autoLock(DoorLocks& door) {
-    if (!door.checkLocked()) {
+void DoorLocks::autoLock() {
+    QDeadlineTimer deadline(5000);
+    while(!deadline.hasExpired()) {
 
-        door.isLocked = true;
     }
+    this->isLocked = false;
 }
 
 void MainWindow::setDoorOnStartUp(bool lockStatus, bool openStatus) {
@@ -161,7 +162,6 @@ void MainWindow::setDoorOnStartUp(bool lockStatus, bool openStatus) {
             );
     }
     else {
-
         ui->doorLockedMonitor->setText("DOOR UNLOCKED");
         ui->doorLockedMonitor->setStyleSheet(
             "background-color: red;"
@@ -206,6 +206,8 @@ void MainWindow::on_lockDoor_clicked() {
             "text-align: center;"
             "vertical-align: middle;"
             );
+    AuditLogs *logger = new AuditLogs(QString("Door Is Now Locked"));
+    delete logger;
 }
 
 void MainWindow::on_unlockDoor_clicked() {
@@ -230,6 +232,8 @@ void MainWindow::on_unlockDoor_clicked() {
         "text-align: center;"
         "vertical-align: middle;"
         );
+    AuditLogs *logger = new AuditLogs(QString("Door Is Now Unlocked"));
+    delete logger;
 }
 
 void MainWindow::on_closeDoor_clicked() {
@@ -253,4 +257,6 @@ void MainWindow::on_closeDoor_clicked() {
         "font-size: 16px;"
         "text-align: center;"
         );
+    AuditLogs *logger = new AuditLogs(QString("Door Is Now Closed"));
+    delete logger;
 }

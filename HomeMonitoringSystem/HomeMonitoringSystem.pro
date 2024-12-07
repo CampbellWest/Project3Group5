@@ -10,10 +10,8 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    TylerSource/device.cpp \
     TylerSource/doorlocks.cpp \
     TylerSource/garagedoor.cpp \
-    TylerSource/locks.cpp \
     TylerSource/windows.cpp \
     CampbellSource/AuditLogs.cpp \
     main.cpp \
@@ -35,9 +33,7 @@ SOURCES += \
 HEADERS += \
     TylerHeader/doorlocks.h \
     TylerHeader/garagedoor.h \
-    TylerHeader/locks.h \
     TylerHeader/windows.h \
-    TylerHeader/device.h \
     CampbellHeader/AuditLogs.h \
     mainwindow.h \
     CampbellHeader/COMonitor.h \

@@ -1,12 +1,13 @@
 #ifndef WINDOWS_H
 #define WINDOWS_H
 
-#include "../TylerHeader/locks.h"
 #include <QString>
+#include "CampbellHeader/AuditLogs.h"
 
 class MainWindow;
 
 class Windows {
+
     MainWindow *mainWindow;
 
     bool isLocked;
