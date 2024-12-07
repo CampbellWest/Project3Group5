@@ -270,6 +270,30 @@
            <string/>
           </property>
          </widget>
+         <widget class="QComboBox" name="windowDropDown">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>10</y>
+            <width>141</width>
+            <height>28</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QTextBrowser" name="textBrowser_8">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>261</width>
+            <height>181</height>
+           </rect>
+          </property>
+         </widget>
+         <zorder>textBrowser_8</zorder>
+         <zorder>label_7</zorder>
+         <zorder>windowLockedMonitor</zorder>
+         <zorder>windowDropDown</zorder>
         </widget>
        </item>
        <item row="4" column="2">
@@ -326,6 +350,30 @@
            <string/>
           </property>
          </widget>
+         <widget class="QComboBox" name="garageDropDown">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>10</y>
+            <width>131</width>
+            <height>28</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QTextBrowser" name="textBrowser_9">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>261</width>
+            <height>181</height>
+           </rect>
+          </property>
+         </widget>
+         <zorder>textBrowser_9</zorder>
+         <zorder>label_6</zorder>
+         <zorder>garageOpenMonitor</zorder>
+         <zorder>garageDropDown</zorder>
         </widget>
        </item>
        <item row="5" column="3">
@@ -541,6 +589,21 @@
            <string/>
           </property>
          </widget>
+         <widget class="QTextBrowser" name="textBrowser_7">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>261</width>
+            <height>181</height>
+           </rect>
+          </property>
+         </widget>
+         <zorder>textBrowser_7</zorder>
+         <zorder>label_8</zorder>
+         <zorder>doorDropDown</zorder>
+         <zorder>doorOpenMonitor</zorder>
+         <zorder>doorLockedMonitor</zorder>
         </widget>
        </item>
       </layout>
@@ -769,6 +832,24 @@
            <string/>
           </property>
          </widget>
+         <widget class="QTextBrowser" name="textBrowser_12">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>251</width>
+            <height>261</height>
+           </rect>
+          </property>
+         </widget>
+         <zorder>textBrowser_12</zorder>
+         <zorder>label_9</zorder>
+         <zorder>lockDoor</zorder>
+         <zorder>selectDoo</zorder>
+         <zorder>unlockDoor</zorder>
+         <zorder>closeDoor</zorder>
+         <zorder>doorOpenControl</zorder>
+         <zorder>doorLockedControl</zorder>
         </widget>
        </item>
        <item row="0" column="1">
@@ -828,6 +909,21 @@
            <string/>
           </property>
          </widget>
+         <widget class="QTextBrowser" name="textBrowser_11">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>251</width>
+            <height>261</height>
+           </rect>
+          </property>
+         </widget>
+         <zorder>textBrowser_11</zorder>
+         <zorder>label_10</zorder>
+         <zorder>closeGarage</zorder>
+         <zorder>selectDoo_2</zorder>
+         <zorder>garageOpenControl</zorder>
         </widget>
        </item>
        <item row="1" column="1">
@@ -910,6 +1006,22 @@
            <string/>
           </property>
          </widget>
+         <widget class="QTextBrowser" name="textBrowser_10">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>251</width>
+            <height>261</height>
+           </rect>
+          </property>
+         </widget>
+         <zorder>textBrowser_10</zorder>
+         <zorder>label_11</zorder>
+         <zorder>lockWindow</zorder>
+         <zorder>unlockWindow</zorder>
+         <zorder>selectDoo_3</zorder>
+         <zorder>windowLockedControl</zorder>
         </widget>
        </item>
       </layout>
@@ -943,6 +1055,105 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt;&quot;&gt;and probably the audit logs &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'.AppleSystemUIFont'; font-size:13pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="1">
+        <widget class="QWidget" name="widget" native="true">
+         <widget class="QTextBrowser" name="textBrowser_6">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>391</width>
+            <height>541</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_13">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>91</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>User Settings </string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QWidget" name="widget_2" native="true">
+         <widget class="QTextBrowser" name="textBrowser_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>-10</y>
+            <width>391</width>
+            <height>551</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_12">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>10</y>
+            <width>101</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+	font: 20pt;
+}</string>
+          </property>
+          <property name="text">
+           <string>Audit Logs</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QListWidget" name="LogList">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>70</y>
+            <width>361</width>
+            <height>451</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QListWidget {
+	
+	font: 15pt;
+	color: black;
+background-color: rgb(197, 201, 205);
+}
+</string>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ClearLogs">
+          <property name="geometry">
+           <rect>
+            <x>270</x>
+            <y>10</y>
+            <width>101</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Clear Logs</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </widget>

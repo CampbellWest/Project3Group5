@@ -69,6 +69,8 @@ private slots:
     void on_lockWindow_clicked();
     void on_unlockWindow_clicked();
 
+    void on_ClearLogs_clicked();
+
 private:
     Ui::MainWindow *ui;
 

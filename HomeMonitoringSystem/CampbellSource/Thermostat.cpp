@@ -35,7 +35,7 @@ void Thermostat::toggleFan() {
         this->fanStatus = true;
     }
 
-    AuditLogs *logger = new AuditLogs(QString("Fan toggle to ") + (getFanStatus() ? "On" : "Off"));
+    AuditLogs *logger = new AuditLogs(QString("Fan toggle to ") + (getFanStatus() ? "Off" : "On"));
     delete logger;
 }
 
@@ -139,7 +139,7 @@ void MainWindow::on_ThermostatPush_clicked() {
 
     int tempInt = temp.toInt();
 
-    if(tempInt >= 5 && tempInt <= 30) {
+    if(tempInt >= 10 && tempInt <= 30) {
         ui->ThermostatNumber->display(tempInt);
         ui->ThermoStatInput->clear();
 

@@ -29,8 +29,8 @@ void MainWindow::on_pushButton_clicked()
 
     int randomNum = QRandomGenerator::global()->bounded(0, 5);
 
-    if (randomNum > 3) {
-        ui->SmokeAlarmNumber->display(1);
+    if (randomNum == 4) {
+        ui->SmokeAlarmNumber->display(10);
         smokeAlarmPopup->setParent(this); // Set the main window as the parent
         smokeAlarmPopup->resize(500, 300);
         smokeAlarmPopup->setWindowFlags(Qt::Popup | Qt::FramelessWindowHint);
