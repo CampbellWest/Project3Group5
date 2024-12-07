@@ -12,6 +12,7 @@
 #include "TylerHeader/doorlocks.h"
 #include "TylerHeader/garagedoor.h"
 #include "TylerHeader/windows.h"
+#include "CampbellHeader/AuditLogs.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -33,6 +34,16 @@ public:
     void setGarageOnStartUp(bool);
     void setWindowOnStartUp(bool);
 
+    static MainWindow* instance() {
+        return mainInstance;
+    }
+
+signals:
+    void updateLogSignal();
+
+public slots:
+    void refreshLogs();
+
 private slots:
 
     // Thermostat
@@ -41,7 +52,6 @@ private slots:
 
 
     // CO Monitor
-
     // Smoke Alarm
     void on_pushButton_clicked();
 
@@ -58,13 +68,17 @@ private slots:
     //Windows
     void on_lockWindow_clicked();
     void on_unlockWindow_clicked();
+
 private:
     Ui::MainWindow *ui;
+
+    static MainWindow *mainInstance;
 
     // Campbell's Classes
     Thermostat *thermostat;
     COMonitor *coMonitor;
     SmokeAlarm *smokeAlarm;
+    AuditLogs *auditLogs;
 
     SmokeAlarmAlertForm *smokeAlarmPopup;
 
