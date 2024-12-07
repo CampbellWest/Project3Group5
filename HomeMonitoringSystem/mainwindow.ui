@@ -101,7 +101,7 @@
      <enum>QTabWidget::TabShape::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="iconSize">
      <size>
@@ -270,16 +270,6 @@
            <string/>
           </property>
          </widget>
-         <widget class="QComboBox" name="windowDropDown">
-          <property name="geometry">
-           <rect>
-            <x>100</x>
-            <y>10</y>
-            <width>141</width>
-            <height>28</height>
-           </rect>
-          </property>
-         </widget>
         </widget>
        </item>
        <item row="4" column="2">
@@ -334,16 +324,6 @@
           </property>
           <property name="text">
            <string/>
-          </property>
-         </widget>
-         <widget class="QComboBox" name="garageDropDown">
-          <property name="geometry">
-           <rect>
-            <x>110</x>
-            <y>10</y>
-            <width>131</width>
-            <height>28</height>
-           </rect>
           </property>
          </widget>
         </widget>
@@ -513,16 +493,6 @@
           </property>
           <property name="text">
            <string>Doors</string>
-          </property>
-         </widget>
-         <widget class="QComboBox" name="doorDropDown">
-          <property name="geometry">
-           <rect>
-            <x>70</x>
-            <y>10</y>
-            <width>171</width>
-            <height>28</height>
-           </rect>
           </property>
          </widget>
          <widget class="QLabel" name="doorOpenMonitor">
@@ -727,16 +697,6 @@
            <string>Lock</string>
           </property>
          </widget>
-         <widget class="QComboBox" name="selectDoo">
-          <property name="geometry">
-           <rect>
-            <x>70</x>
-            <y>10</y>
-            <width>171</width>
-            <height>28</height>
-           </rect>
-          </property>
-         </widget>
          <widget class="QPushButton" name="unlockDoor">
           <property name="geometry">
            <rect>
@@ -845,16 +805,6 @@
            <string>Close</string>
           </property>
          </widget>
-         <widget class="QComboBox" name="selectDoo_2">
-          <property name="geometry">
-           <rect>
-            <x>110</x>
-            <y>10</y>
-            <width>131</width>
-            <height>28</height>
-           </rect>
-          </property>
-         </widget>
          <widget class="QLabel" name="garageOpenControl">
           <property name="geometry">
            <rect>
@@ -935,16 +885,6 @@
           </property>
           <property name="text">
            <string>Unlock</string>
-          </property>
-         </widget>
-         <widget class="QComboBox" name="selectDoo_3">
-          <property name="geometry">
-           <rect>
-            <x>80</x>
-            <y>10</y>
-            <width>161</width>
-            <height>28</height>
-           </rect>
           </property>
          </widget>
          <widget class="QLabel" name="windowLockedControl">

@@ -67,6 +67,7 @@ void GarageDoor::autoClose(GarageDoor& door) {
 }
 
 void MainWindow::setGarageOnStartUp(bool openStatus) {
+
     if (!openStatus){
 
         ui->garageOpenMonitor->setText("GARAGE CLOSED");
@@ -132,4 +133,6 @@ void MainWindow::on_closeGarage_clicked() {
         "font-size: 16px;"
         "text-align: center;"
         );
+    AuditLogs *logger = new AuditLogs(QString("Garage Is Now Closed"));
+    delete logger;
 }
